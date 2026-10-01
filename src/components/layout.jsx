@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { icon } from './ui';
+import { PersonalizedWorkspace } from './personalization';
 
 export function Shell({ dark, toast, children, menuOpen, onCloseMenu, onOpenMenu, onOpenProfile, onChooseRole, onNavigate, onGoHome, onGoOrders, onGoWishlist, onGoCart, role, user, onGoogleLogin, onLogout }) {
   const roleOptions = [
@@ -284,6 +285,8 @@ export function ProfilePage({ user, role, dark, setDark, go, notify, onGoogleLog
         <button className="btn primary full" onClick={saveProfile}>Save preferences</button>
         {user?.isAnonymous ? <button className="btn soft full" onClick={onGoogleLogin}>Connect Google</button> : <button className="btn soft full" onClick={onLogout}>Sign out</button>}
       </div>
+
+      <PersonalizedWorkspace role={role || 'consumer'} user={user} notify={notify} />
     </div>
   </>;
 }

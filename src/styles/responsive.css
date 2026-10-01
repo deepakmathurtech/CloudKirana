@@ -38,6 +38,146 @@
   flex: 0 0 auto;
 }
 
+.shell .nav {
+  z-index: 5;
+}
+
+.cartbar {
+  bottom: 104px;
+  margin-bottom: 0;
+}
+
+.scroll:has(> .home-hero) .personal-card {
+  display: none;
+}
+
+@media (min-height: 780px) {
+  .scroll:has(> .home-hero) {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+  }
+
+  .scroll:has(> .home-hero) > .quick-actions {
+    display: none;
+  }
+
+  .scroll:has(> .home-hero) > .search {
+    flex: 0 0 auto;
+    margin: 4px 10px 6px;
+    padding: 8px 12px;
+  }
+
+  .scroll:has(> .home-hero) > .home-hero {
+    flex: 0 0 auto;
+    min-height: 72px;
+    margin: 0 10px 6px;
+    padding: 10px 14px;
+    border-radius: 16px;
+  }
+
+  .scroll:has(> .home-hero) .home-hero h1 {
+    font-size: 24px;
+    line-height: 1.05;
+  }
+
+  .scroll:has(> .home-hero) > .offers {
+    flex: 0 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin: 6px 10px 8px;
+  }
+
+  .scroll:has(> .home-hero) .offers > div {
+    min-height: 62px;
+    padding: 8px 6px;
+    border-radius: 12px;
+  }
+
+  .scroll:has(> .home-hero) .offers b {
+    font-size: 10px;
+  }
+
+  .scroll:has(> .home-hero) .offers small {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .scroll:has(> .home-hero) > .categories {
+    flex: 0 0 auto;
+    margin: 0 10px 6px;
+    padding-bottom: 4px;
+  }
+
+  .scroll:has(> .home-hero) .categories button {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .scroll:has(> .home-hero) > .content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 0;
+    overflow: hidden;
+    padding: 6px 10px 8px;
+  }
+
+  .scroll:has(> .home-hero) .section-title {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  .scroll:has(> .home-hero) .section-title h2 {
+    font-size: 17px;
+  }
+
+  .scroll:has(> .home-hero) .store-card {
+    display: grid;
+    flex: 1 1 0;
+    grid-template-columns: 78px minmax(0, 1fr);
+    min-height: 64px;
+    margin: 0;
+    border-radius: 14px;
+  }
+
+  .scroll:has(> .home-hero) .store-cover {
+    height: 100%;
+    min-height: 64px;
+    padding: 8px;
+  }
+
+  .scroll:has(> .home-hero) .store-cover > .fa-store {
+    font-size: 18px;
+  }
+
+  .scroll:has(> .home-hero) .store-body {
+    align-content: center;
+    gap: 4px;
+    min-width: 0;
+    padding: 6px 10px;
+  }
+
+  .scroll:has(> .home-hero) .store-body > div {
+    align-items: center;
+    gap: 6px;
+  }
+
+  .scroll:has(> .home-hero) .store-body h3 {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
+  .scroll:has(> .home-hero) .store-body p {
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 10px;
+  }
+}
+
 @media (min-width: 481px) {
   .drawer {
     width: min(360px, calc(100% - 48px));
@@ -148,6 +288,80 @@
 }
 
 @media (min-width: 720px) {
+  .dashboard-hero {
+    min-height: 240px;
+    padding: 24px;
+  }
+
+  .quick-stat {
+    min-height: 88px;
+    padding: 18px 16px;
+  }
+
+  .role-action-card {
+    min-height: 84px;
+    padding: 16px;
+  }
+
+  .feature-group {
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .top strong {
+    font-size: 18px;
+  }
+
+  .drawer-item {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .dashboard-hero h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .dashboard-hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .quick-stat small,
+  .stat small {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .role-action-card strong {
+    font-size: 14px;
+  }
+
+  .role-action-card small {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .action-cta {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .business-tabs button {
+    min-height: 40px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
   .roles {
     padding: 32px 36px;
   }
@@ -179,6 +393,66 @@
 }
 
 @media (min-width: 1080px) {
+  .dashboard-hero {
+    min-height: 280px;
+    padding: 30px;
+  }
+
+  .quick-stat {
+    min-height: 108px;
+    padding: 22px 20px;
+    gap: 8px;
+  }
+
+  .role-action-card {
+    min-height: 96px;
+    padding: 18px;
+  }
+
+  .feature-group {
+    gap: 16px;
+    padding: 22px;
+  }
+
+  .timeline-card {
+    padding: 22px;
+  }
+
+  .top strong {
+    font-size: 19px;
+  }
+
+  .dashboard-hero h1 {
+    font-size: 42px;
+  }
+
+  .dashboard-hero p {
+    font-size: 16px;
+  }
+
+  .quick-stat small,
+  .stat small {
+    font-size: 14px;
+  }
+
+  .role-action-card strong {
+    font-size: 15px;
+  }
+
+  .role-action-card small {
+    font-size: 13px;
+  }
+
+  .action-cta {
+    font-size: 12px;
+  }
+
+  .business-tabs button {
+    min-height: 44px;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
   .role-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -224,11 +498,128 @@
     grid-template-columns: 1fr;
   }
 
+  .drawer-item {
+    font-size: 13px;
+  }
+
+  .dashboard-hero p {
+    font-size: 13px;
+  }
+
+  .quick-stat small,
+  .stat small,
+  .role-action-card small {
+    font-size: 12px;
+  }
+
+  .role-action-card strong {
+    font-size: 14px;
+  }
+
+  .action-cta {
+    font-size: 11px;
+  }
+
+  .business-tabs button {
+    min-height: 40px;
+    font-size: 12px;
+  }
+
+  .shell .nav button {
+    min-height: 40px;
+    font-size: 11px;
+  }
+
   .shell .nav {
     right: 12px;
     bottom: max(12px, env(safe-area-inset-bottom));
     left: 12px;
     width: auto;
     transform: none;
+  }
+
+  .cartbar {
+    bottom: calc(100px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 480px) and (max-height: 740px) {
+  .roles {
+    gap: 8px;
+    overflow: hidden;
+    padding: 8px 12px 10px;
+  }
+
+  .brand {
+    min-height: 36px;
+    padding: 6px 8px;
+    border-radius: 12px;
+  }
+
+  .logo {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  .auth-status {
+    font-size: 9px;
+  }
+
+  .roles h1 {
+    margin: 7px 0 4px;
+    padding-top: 0;
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .roles p {
+    max-width: none;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .auth-actions {
+    margin-top: 0;
+  }
+
+  .auth-actions button {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .role-list {
+    gap: 6px;
+    margin-top: 0;
+  }
+
+  .role-btn {
+    min-height: 54px;
+    padding: 6px 9px;
+    gap: 9px;
+    border-radius: 13px;
+  }
+
+  .role-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .role-btn b {
+    margin-bottom: 1px;
+    font-size: 12px;
+  }
+
+  .role-btn small {
+    font-size: 9px;
+    line-height: 1.2;
+  }
+
+  .roles footer {
+    gap: 4px;
+    padding-top: 6px;
+    font-size: 9px;
   }
 }
