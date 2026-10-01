@@ -1,0 +1,234 @@
+#root {
+  min-height: 100dvh;
+}
+
+.drawer-header .drawer-close {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(21, 58, 44, 0.04);
+  color: var(--ink);
+}
+
+.drawer {
+  z-index: 16;
+}
+
+.drawer-close:focus-visible {
+  outline: 2px solid var(--forest2);
+  outline-offset: 2px;
+}
+
+.business-tabs {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.business-tabs button {
+  flex: 0 0 auto;
+}
+
+@media (min-width: 481px) {
+  .drawer {
+    width: min(360px, calc(100% - 48px));
+  }
+
+  .shell {
+    width: min(100%, 1600px);
+    height: 100dvh;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .scroll {
+    padding-bottom: 124px;
+    overscroll-behavior: contain;
+  }
+
+  .content {
+    padding: 24px 28px 36px;
+  }
+
+  .scroll > .search,
+  .scroll > .home-hero,
+  .scroll > .quick-actions,
+  .scroll > .offers,
+  .scroll > .categories,
+  .scroll > .content {
+    width: min(100%, 1440px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .scroll > .search {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .home-hero {
+    padding: 22px 26px;
+  }
+
+  .home-hero h1 {
+    font-size: 34px;
+  }
+
+  .quick-actions {
+    max-width: 720px;
+  }
+
+  .offers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .offers > div:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .content:has(> .store-card) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 16px;
+  }
+
+  .content:has(> .store-card) > .personal-card,
+  .content:has(> .store-card) > .section-title {
+    grid-column: 1 / -1;
+  }
+
+  .content:has(> .store-card) > .store-card {
+    height: 100%;
+    margin: 0;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .role-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .role-btn {
+    min-height: 76px;
+  }
+
+  .shell .nav {
+    right: auto;
+    left: 50%;
+    width: min(520px, calc(100% - 48px));
+    padding: 10px;
+    transform: translateX(-50%);
+  }
+
+  .shell .nav button {
+    padding: 11px 14px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 720px) {
+  .roles {
+    padding: 32px 36px;
+  }
+
+  .roles h1 {
+    font-size: 40px;
+  }
+
+  .roles p {
+    max-width: 520px;
+    font-size: 14px;
+  }
+
+  .offers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .offers > div:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .role-flow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .role-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .role-flow-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .content {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  .content:has(> .store-card) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #root,
+  .shell {
+    height: 100dvh;
+  }
+
+  .shell {
+    width: 100%;
+    min-height: 100svh;
+  }
+
+  .scroll {
+    padding-bottom: calc(100px + env(safe-area-inset-bottom));
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shell .nav {
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    left: 12px;
+    width: auto;
+    transform: none;
+  }
+}

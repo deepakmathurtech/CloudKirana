@@ -1,0 +1,3 @@
+export const categories = [['All','fa-border-all'],['Staples','fa-wheat-awn'],['Snacks','fa-cookie-bite'],['Dairy','fa-cheese'],['Beverages','fa-mug-hot'],['Personal Care','fa-pump-soap'],['Household','fa-soap']];
+export const roles = { retailer: ['Shopkeeper','Sharma General Store'], distributor: ['Distributor','Noida Distribution Network'], wholesaler: ['Wholesaler','Noida Bulk Traders'], manufacturer: ['Manufacturer','Aarav Foods Pvt Ltd'] };
+export const reviews = [['Priya S.','Batch stamps actually match the invoice.'],['Ankit V.','Fast delivery, atta was fresh.'],['Meera R.','Packing was neat. Reordering already.']];
